@@ -4,14 +4,38 @@
 
 //document.getElementById("sound-image").src="./assets/media/images/car.svg";
 
-var form = document.getElementById("party-horn-form");
-form.addEventListener("click",changeImage);
-function changeImage() {
-    document.getElementById("sound-image").src="./assets/media/images/car.svg";
-    document.getElementById("sound-image").src="./assets/media/images/air-horn.svg";
 
-    //change the image accroding to the radio button it is on
+//Work FOR CLICK
+let num = document.getElementById("party-horn-form");
+num.addEventListener("click",change);
+num.addEventListener("change", change);
+function change() {
+    let volumeNumber = document.getElementById("volume-number");
+    let volumeSlider = document.getElementById("volume-slider");
+    volumeSlider.value = volumeNumber.value;
 }
+
+
+//Slider Works
+let slide = document.getElementById("party-horn-form");
+slide.addEventListener("input", donzo);
+function donzo() {
+    let vol = document.getElementById("volume-number");
+    let v = document.getElementById("volume-slider");
+    vol.value = v.value;
+}
+
+
+
+
+// var form = document.getElementById("party-horn-form");
+// form.addEventListener("click",changeImage);
+// function changeImage() {
+//     document.getElementById("sound-image").src="./assets/media/images/car.svg";
+//     document.getElementById("sound-image").src="./assets/media/images/air-horn.svg";
+
+//     //change the image accroding to the radio button it is on
+// }
 
 
 var partySound = document.getElementById("party-horn-form");
