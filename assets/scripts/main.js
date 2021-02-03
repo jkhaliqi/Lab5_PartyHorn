@@ -1,7 +1,7 @@
 // main.js
 
 // TODO
-
+let honk = document.getElementById("honk-btn");
 //click changes volume
 let number = document.getElementById("volume-number");
 let slide = document.getElementById("volume-slider");
@@ -70,16 +70,25 @@ function party() {
     hornSound.src="./assets/media/audio/party-horn.mp3"
 }
 
+// //Get the sound to play
+// honk.addEventListener("click", playSound);
+// function playSound(evt) {
+//     evt.preventDefault();
+//     let sound = document.getElementById("horn-sound");
+//     let volume = document.getElementById("volume-number");
+//     sound.volume = volume.value/100;
+//     sound.play();
+// }
 
+
+//works
 var partySound = document.getElementById("party-horn-form");
-//sound. loook into events that can change this into playng the sound
 partySound.addEventListener("submit",playSound);
 
-function playSound(){
+function playSound(evt){
+    evt.preventDefault();
     var audio = document.getElementById("horn-sound");
     var volume = document.getElementById("volume-number");
-    audio.volume = 0.1; //extrct volume entered from user on the form
-    alert(audio.volume);
+    audio.volume = volume.value/100; 
     audio.play();
-    alert(audio.volume);
 }
