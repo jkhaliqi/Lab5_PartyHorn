@@ -11,15 +11,19 @@ function changeNumber() {
     slide.value = number.value;
     if(slide.value <= 100){
         volumeImg.src="./assets/media/icons/volume-level-3.svg";
+        honk.removeAttribute("disabled");
     }
     if(slide.value <= 66){
         volumeImg.src="./assets/media/icons/volume-level-2.svg";
+        honk.removeAttribute("disabled");
     }
     if(slide.value <= 33){
         volumeImg.src="./assets/media/icons/volume-level-1.svg";
+        honk.removeAttribute("disabled");
     }
     if(slide.value <= 0){
         volumeImg.src="./assets/media/icons/volume-level-0.svg";
+        honk.setAttribute("disabled", "");
     }
 }
 
@@ -29,15 +33,19 @@ function slideNumber() {
     number.value = slide.value;
     if(number.value <= 100) {
         volumeImg.src="./assets/media/icons/volume-level-3.svg";
+        honk.removeAttribute("disabled");
     }
     if(number.value <= 66) {
         volumeImg.src="./assets/media/icons/volume-level-2.svg";
+        honk.removeAttribute("disabled");
     }
     if(number.value <= 33) {
         volumeImg.src="./assets/media/icons/volume-level-1.svg";
+        honk.removeAttribute("disabled");
     }
     if(number.value <= 0) {
         volumeImg.src="./assets/media/icons/volume-level-0.svg";
+        honk.setAttribute("disabled", "");
     }
 
 }
@@ -70,25 +78,14 @@ function party() {
     hornSound.src="./assets/media/audio/party-horn.mp3"
 }
 
-// //Get the sound to play
-// honk.addEventListener("click", playSound);
-// function playSound(evt) {
-//     evt.preventDefault();
-//     let sound = document.getElementById("horn-sound");
-//     let volume = document.getElementById("volume-number");
-//     sound.volume = volume.value/100;
-//     sound.play();
-// }
-
-
-//works
-var partySound = document.getElementById("party-horn-form");
-partySound.addEventListener("submit",playSound);
-
-function playSound(evt){
+//Get the sound to play
+honk.addEventListener("click", playSound);
+function playSound(evt) {
     evt.preventDefault();
-    var audio = document.getElementById("horn-sound");
-    var volume = document.getElementById("volume-number");
-    audio.volume = volume.value/100; 
-    audio.play();
+    let sound = document.getElementById("horn-sound");
+    let volume = document.getElementById("volume-number");
+    sound.volume = volume.value/100;
+    sound.play();
 }
+
+
