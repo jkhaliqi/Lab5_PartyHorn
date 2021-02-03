@@ -47,39 +47,28 @@ let radioHorn = document.getElementById("radio-air-horn");
 let carHorn = document.getElementById("radio-car-horn");
 let partyHorn = document.getElementById("radio-party-horn");
 let picture = document.getElementById("sound-image");
+let hornSound = document.getElementById("horn-sound");
 
 //change picture to radio horn when clicked
 radioHorn.addEventListener("click",radioPic);
 function radioPic() {
     picture.src="./assets/media/images/air-horn.svg";
+    hornSound.src="./assets/media/audio/air-horn.mp3";
 }
 
 //change picture to car horn when clicked
 carHorn.addEventListener("click", carPic);
 function carPic() {
     picture.src="./assets/media/images/car.svg";
+    hornSound.src="./assets/media/audio/car-horn.mp3"
 }
 
 //change picture to party horn when clicked
 partyHorn.addEventListener("click", party);
 function party() {
     picture.src="./assets/media/images/party-horn.svg"
+    hornSound.src="./assets/media/audio/party-horn.mp3"
 }
-
-
-
-
-
-
-
-// var form = document.getElementById("party-horn-form");
-// form.addEventListener("click",changeImage);
-// function changeImage() {
-//     document.getElementById("sound-image").src="./assets/media/images/car.svg";
-//     document.getElementById("sound-image").src="./assets/media/images/air-horn.svg";
-
-//     //change the image accroding to the radio button it is on
-// }
 
 
 var partySound = document.getElementById("party-horn-form");
