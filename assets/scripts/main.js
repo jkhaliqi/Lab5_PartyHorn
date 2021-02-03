@@ -5,25 +5,44 @@
 //document.getElementById("sound-image").src="./assets/media/images/car.svg";
 
 
-//Work FOR CLICK
-let num = document.getElementById("party-horn-form");
-num.addEventListener("click",change);
-num.addEventListener("change", change);
-function change() {
-    let volumeNumber = document.getElementById("volume-number");
-    let volumeSlider = document.getElementById("volume-slider");
-    volumeSlider.value = volumeNumber.value;
+
+
+//click
+let v = document.getElementById("volume-number");
+let s = document.getElementById("volume-slider");
+v.addEventListener("input", c);
+function c() {
+    s.value = v.value;
 }
+//slide
+s.addEventListener("input", change) 
+function change() {
+    v.value = s.value;
+}
+
+
+
+
+//Work FOR CLICK
+// let num = document.getElementById("party-horn-form");
+// num.addEventListener("input", change);
+// function change() {
+//     let volumeNumber = document.getElementById("volume-number");
+//     let volumeSlider = document.getElementById("volume-slider");
+//     volumeSlider.value = volumeNumber.value;
+
+// }
+
 
 
 //Slider Works
-let slide = document.getElementById("party-horn-form");
-slide.addEventListener("input", donzo);
-function donzo() {
-    let vol = document.getElementById("volume-number");
-    let v = document.getElementById("volume-slider");
-    vol.value = v.value;
-}
+// let slide = document.getElementById("party-horn-form");
+// slide.addEventListener("input", donzo);
+// function donzo() {
+//     let vol = document.getElementById("volume-number");
+//     let v = document.getElementById("volume-slider");
+//     vol.value = v.value;
+// }
 
 
 
