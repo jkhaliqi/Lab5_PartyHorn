@@ -2,16 +2,10 @@
 
 // TODO
 
-//document.getElementById("sound-image").src="./assets/media/images/car.svg";
-
-
-
-
 //click changes volume
 let number = document.getElementById("volume-number");
 let slide = document.getElementById("volume-slider");
 let volumeImg = document.getElementById("volume-image");
-
 number.addEventListener("input", changeNumber);
 function changeNumber() {
     slide.value = number.value;
@@ -47,6 +41,32 @@ function slideNumber() {
     }
 
 }
+
+//Change the picture and the audio that is played
+let radioHorn = document.getElementById("radio-air-horn");
+let carHorn = document.getElementById("radio-car-horn");
+let partyHorn = document.getElementById("radio-party-horn");
+let picture = document.getElementById("sound-image");
+
+//change picture to radio horn when clicked
+radioHorn.addEventListener("click",radioPic);
+function radioPic() {
+    picture.src="./assets/media/images/air-horn.svg";
+}
+
+//change picture to car horn when clicked
+carHorn.addEventListener("click", carPic);
+function carPic() {
+    picture.src="./assets/media/images/car.svg";
+}
+
+//change picture to party horn when clicked
+partyHorn.addEventListener("click", party);
+function party() {
+    picture.src="./assets/media/images/party-horn.svg"
+}
+
+
 
 
 
